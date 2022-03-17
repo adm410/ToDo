@@ -1,10 +1,11 @@
 [![Build Complete](https://img.shields.io/badge/build-passing-brightgreen)](https://todo.admbot.repl.co/)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/adm410/ToDo/main)
 
 # ToDo
 
 A simple checklist made using HTML, Javascript and CSS.
 
-ToDo can be accessed using this [Link to Google](https://www.google.com)
+ToDo can be accessed using this [link](https://todo.admbot.repl.co).
 
 ## Screenshots
 
