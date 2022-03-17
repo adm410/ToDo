@@ -4,7 +4,7 @@
 
 A simple checklist made using HTML, Javascript and CSS.
 
-ToDo can be accessed using this [go](https://todo.admbot.repl.co/){:target="_blank" rel="noopener"}.
+ToDo can be accessed using this <a href="https://todo.admbot.repl.co" target="_blank">link</a>.
 
 ## Screenshots
 
