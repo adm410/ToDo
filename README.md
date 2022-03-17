@@ -4,8 +4,8 @@
 
 A simple checklist made using HTML, Javascript and CSS.
 
-ToDo can be accessed using this <a href="http://stackoverflow.com" target="_blank">Go</a>
-
+ToDo can be accessed using this
+[link](http://stackoverflow.com){:target="_blank"}
 ## Screenshots
 
 ![Screenshot-1](https://i.ibb.co/8xTNW5K/To-Do-SS-1.png)
