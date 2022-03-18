@@ -10,6 +10,5 @@ ToDo can be accessed using this [link](https://todo.admbot.repl.co).
 
 ## Screenshots
 
-![Screenshot-1](https://i.ibb.co/8xTNW5K/To-Do-SS-1.png)
-
-![Screenshot-1](https://i.ibb.co/kDLgWQ0/To-Do-SS-2.png)
+![Screenshot 2022-03-18 at 4 10 45 PM](https://user-images.githubusercontent.com/90643958/158988817-43bd00cd-6fdd-4229-8b6c-a160496322ea.png)
+![Screenshot 2022-03-18 at 4 11 00 PM](https://user-images.githubusercontent.com/90643958/158988825-fcaad7c6-83b6-4e5f-9ed3-a6e348e750f6.png)
