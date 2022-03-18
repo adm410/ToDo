@@ -1,6 +1,7 @@
 [![Build Complete](https://img.shields.io/badge/build-passing-brightgreen)](https://todo.admbot.repl.co/)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/adm410/ToDo/main)
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/adm410/ToDo)
+![GitHub Release Date](https://img.shields.io/github/release-date/adm410/ToDo)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/adm410/ToDo)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Ftodo.admbot.repl.co%2F)
 
 # ToDo
 
