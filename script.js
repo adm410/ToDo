@@ -772,23 +772,3 @@ dycalendar.draw({
     prevnextbutton:'show'
 
 })
-
-document.addEventListener("click", (e) => {
-    if (box.contains(e.target)) {
-      result.innerHTML = "inside";
-    } else {
-      result.innerHTML = "outside";
-    }
-  });
-
-//Keyboard Shortcuts
-document.onkeydown = function(e) {
-    switch (e.keyCode) {
-         case 39:         /*'m' for opening calender*/
-            openNav();
-            break;
-        case 37:         /*'esc' for closing calender*/
-            closeNav(); 
-            break;
-    }
-};
