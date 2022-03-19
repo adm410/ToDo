@@ -4,10 +4,10 @@
 <linkrel="apple-touch-icon" href="https://github.com/adm410/ToDo/blob/main/ToDo.png?raw=true">
 <link rel="icon" href="https://raw.githubusercontent.com/adm410/ToDo/main/favicon.ico">
 <main id="body">
-  <div class="disable-select">
     <div class="date" onclick="openNav()">
     <span id="date"></span> 
     <br><span id="clock"></span></div>
+    <div class="disable-select">
     <button class="openbtn" id="openbtn" onclick="openNav()">&#128467;</button> 
     <div id="mySidebar" class="sidebar">
       <a class="closebtn" onclick="closeNav()">&#10005;</a>
@@ -22,13 +22,13 @@
     </section>
     </div></div>
     <div id="headereffect" class="content">ToDo   
-      <form class="js-form">  
+      <form onclick="closeNav()" class="js-form">  
       <input placeholder="Enter ToDo..." autofocus type="text" id="input"selected class="js-todo-input">
       </form>
     </div>
   </div>
   <br><br>
-  <div class="container">
+  <div onclick="closeNav()" class="container">
     <div class="disable-select"></div>
     <div class="listbox">
     <ul class="todo-list js-todo-list"></ul>

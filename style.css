@@ -56,7 +56,7 @@ svg {
   text-decoration: line-through;
   z-index: -1;
   opacity: .6;
-  color: #62BB47;
+  color: #349e48;
   font-style: italic;
 }
 
@@ -115,7 +115,7 @@ input[type="text"] {
   width: 90%;
   padding: 1%;
   border-radius: 20px !important;
-  border: 3px solid;
+  border: 3px solid !important;
   font-size: 25px;
   margin-top: 1%;
   background-color: transparent;
@@ -167,6 +167,7 @@ input[type="text"] {
   transition: 0.3s;
   background-color: transparent;
   height: 220px;
+  -webkit-user-select:none;
 }
 
 /*Clock*/
@@ -183,7 +184,7 @@ input[type="text"] {
 
 #clock, #date {
   float: right;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 /*Menu*/
@@ -193,7 +194,7 @@ input[type="text"] {
   position: fixed;
   z-index: 1;
   text-align:center;
-  transition: 0.5s;
+  transition: 0.3s;
   padding-top: 60px;
   z-index: 20;
 }
@@ -207,10 +208,12 @@ input[type="text"] {
   margin-left: 50px;
   z-index: 20;
   transition: 0.3s;
+  cursor: pointer;
 }
 .sidebar {
 -webkit-backdrop-filter: blur(100px);
 backdrop-filter: blur(100px); 
+cursor:auto;
 }
 
 .openbtn {
@@ -221,10 +224,11 @@ backdrop-filter: blur(100px);
   float: right;
   left: 10%;
   font-size: 40px;
-  transition: 0.3s;
+  transition: 0.2s;
   letter-spacing: 1px;
   z-index: 10;
   padding-top: 25px;
+  cursor: pointer;
 }
 
 #main {
@@ -240,6 +244,7 @@ backdrop-filter: blur(100px);
 /*Calender*/
 section
 {
+  bottom:10%;
   position: relative;
   display:flex;
   justify-content: center;
@@ -253,6 +258,7 @@ section
 {
   position: relative;
   z-index: 1000;
+  cursor:auto;
 }
 .calendercontainer
 {
@@ -269,6 +275,7 @@ section
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor:auto;
 }
 #calendar
 {
@@ -289,7 +296,6 @@ section
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-
 }
 #calendar table td:hover
 {
@@ -302,7 +308,6 @@ color: red;
 }
 
 .dycalendar-prev-next-btn.prev-btn 
-
 {
   width: 44px;
   height: 25px;
@@ -324,10 +329,9 @@ color: red;
 .dycalendar-prev-next-btn.prev-btn:active,
 .dycalendar-prev-next-btn.next-btn:active
 {   
-  font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
-  color:maroon;
+  color:#62BB47;;
 }
 
 .dycalendar-prev-next-btn.prev-btn,
@@ -382,6 +386,10 @@ color: red;
   font-weight: bold;
 }
 
+.dycalendar-month-container:active {
+cursor: pointer;
+color:#62BB47;;
+}
 .dycalendar-month-container div{
   padding : 0;
   margin-bottom : 10px;
@@ -416,7 +424,7 @@ color: red;
 
 .dycalendar-month-container .dycalendar-today-date,
 .dycalendar-month-container .dycalendar-target-date {
-    background-color: red;
-    color : #fff;
-    border-radius: 2px;
+  background-color: red !important;
+  color : #fff !important;
+  border-radius: 2px;
 }
