@@ -12,7 +12,7 @@ ToDo can be accessed using this [link](https://todo.admbot.repl.co).
 ## Updates in V2.1
 
 - Added support for hotkeys.
-
+ 
     `→` to open calender.
 
     `←` to close calender.
