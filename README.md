@@ -7,7 +7,7 @@
 
 A simple checklist made using HTML, Javascript and CSS.
 
-ToDo can be accessed using this [link](https://todo.admbot.repl.co).
+ToDo can be accessed using this [link](https://adm410.github.io/ToDo/).
 
 ## Updates in V2.1
 
