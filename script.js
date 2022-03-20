@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById("clock").style.letterSpacing = "0px";
       document.getElementById("date").style.fontSize = "15px";
       document.getElementById("date").style.letterSpacing = "0px";
-      document.getElementById("openbtn").style.fontSize = "30px";
+      document.getElementById("topBtn").style.right = "30px";
     } else {
       document.getElementById("headereffect").style.fontSize = "90px";
       document.getElementById("headereffect").style.boxShadow = "";
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById("clock").style.letterSpacing = "1px";
       document.getElementById("date").style.fontSize = "18px";
       document.getElementById("date").style.letterSpacing = "1px";
-      document.getElementById("openbtn").style.fontSize = "40px";
+      document.getElementById("topBtn").style.right = "-60px";
   }
 }
 
@@ -192,12 +192,12 @@ clock.init();
 //Menu
 function openNav() {
   document.getElementById("mySidebar").style.width = "450px";
-  document.getElementById("headereffect").style.marginLeft = "0px";
+  document.getElementById("slide").style.marginLeft = "0px";
 }
 
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("headereffect").style.marginLeft= "0";
+  document.getElementById("slide").style.marginLeft= "0px";
 }
 
 //Calender
@@ -773,14 +773,6 @@ dycalendar.draw({
     prevnextbutton:'show'
 
 })
-
-document.addEventListener("click", (e) => {
-    if (box.contains(e.target)) {
-      result.innerHTML = "inside";
-    } else {
-      result.innerHTML = "outside";
-    }
-  });
 
 //Keyboard Shortcuts
 document.onkeydown = function(e) {
