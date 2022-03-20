@@ -27,4 +27,5 @@ ToDo can be accessed using this [link](https://todo.admbot.repl.co).
 
 ####ToDo
 A simple task management app.
-![apple-touch-icon](https://user-images.githubusercontent.com/90643958/159159215-69e53f6e-80d2-450e-9790-d65e20931d6b.png)
+![icon](https://user-images.githubusercontent.com/90643958/159159251-e9acb473-582b-44ca-a66d-54eececa97aa.png)
+
