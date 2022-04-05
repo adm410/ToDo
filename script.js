@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.onscroll = function() {scrollFunction()};
   
   function scrollFunction() {
-    if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+    if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
       document.getElementById("headereffect").style.fontSize = "55px";
       document.getElementById("headereffect").style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
       document.getElementById("input").style.width = "70%";
