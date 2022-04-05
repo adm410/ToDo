@@ -9,15 +9,17 @@ A simple checklist made using HTML, Javascript and CSS.
 
 ToDo can be accessed using this [link](https://adm410.github.io/ToDo/).
 
-## Updates in V2.1
+## Updates in V2.2
 
-- Added support for hotkeys.
- 
+- Tweaked animations.
+
+- Minor bug fixes.
+
+- Calender can no be opened by clicking on date or time.
+
     `→` to open calender.
 
     `←` to close calender.
-- Updated Visuals.
-- Tweaked animations.
 
 
 ## Screenshots
