@@ -3,7 +3,7 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/adm410/ToDo)
 ![Website](https://img.shields.io/website?url=https://adm410.github.io/ToDo/)
 
-# ToDo
+# ToDo 
 
 A simple checklist made using HTML, Javascript and CSS.
 
