@@ -1,0 +1,442 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+ font-family: -apple-system, BlinkMacSystemFont, arial;
+ line-height: 1.4;
+}
+
+.listbox {
+  margin: auto;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 0px;
+}
+
+.container {
+  line-height: 2;
+  width: 90%;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: fit-content;
+  margin-top: 0%;
+}
+
+svg {
+  width: 64px;
+  height: 64px;
+}
+
+.todo-list {
+  list-style: none;
+  margin-bottom: 20px;
+  margin-top: 220px;
+}
+
+.todo-item {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-item span {
+  flex-grow: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.done span {
+  text-decoration: line-through;
+  z-index: -1;
+  opacity: .6;
+  color: #349e48;
+  font-style: italic;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.tick {
+  width: 30px;
+  height: 30px;
+  border: 3px solid;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tick::before {
+  content: "\2713";
+  padding-top: 2px;
+  /*padding-left: 1px;*/
+  font-size: 30px;
+  font-weight: 500;
+  color: #62BB47;
+  display: none;
+}
+
+.done .tick::before {
+  display: inline;
+}
+
+.delete-todo {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  -webkit-user-select:none;
+}
+
+.delete-todo svg {
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+form {
+  width: 100%;
+  display: flex;
+}
+
+input[type="text"] {
+  margin: auto;
+  height: 27px;
+  width: 90%;
+  padding: 1%;
+  border-radius: 20px !important;
+  border: 3px solid !important;
+  font-size: 25px;
+  background-color: transparent;
+  transition: 0.2s;
+}
+
+/* Add this below all the other styles */
+
+.empty-state {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+/* Add this below the other styles */
+.todo-list:empty {
+  display: none;
+}
+
+.todo-list:empty + .empty-state {
+  display: flex;
+}
+
+.disable-select{
+  -webkit-user-select:none;
+}
+
+.content {
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px); 
+  opacity: 100%;
+  width:100%;
+  height: 60px;
+  position:fixed;
+  padding-top: 40px;
+  background-color:#eee;
+  text-align:center;
+  font-size: 90px; 
+  font-weight: bold;
+}
+
+#headereffect {
+  margin: auto;
+  font-size: 90px; 
+  position: fixed;
+  top: -1px;
+  width: 100%;
+  transition: 0.3s;
+  background-color: transparent;
+  height: 215px;
+  -webkit-user-select:none;
+}
+
+/*Clock*/
+.date {
+  position: fixed;
+  float: right;
+  right: 5%;
+  font-size: 18px;
+  transition: 0.3s;
+  letter-spacing: 1px;
+  z-index: 10;
+  padding-top: 20px;
+}
+
+#clock, #date {
+  float: right;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+/*Menu*/
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  text-align:center;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 20;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  padding-top: 10px;
+  right: 25px;
+  font-size: 36px;
+  color: default;
+  margin-left: 50px;
+  z-index: 20;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.sidebar {
+-webkit-backdrop-filter: blur(100px);
+backdrop-filter: blur(100px); 
+cursor:auto;
+}
+
+/*.openbtn {
+  background-color: transparent;
+  border-color: transparent;
+  z-index: 11;
+  position: fixed;
+  float: right;
+  left: 10%;
+  font-size: 40px;
+  transition: 0.2s;
+  letter-spacing: 1px;
+  z-index: 10;
+  padding-top: 25px;
+  cursor: pointer;
+}
+<button class="openbtn" id="openbtn" onclick="openNav()">&#128467;</button> */
+
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/*Calender*/
+section
+{
+  bottom:10%;
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: transparent;
+  overflow: hidden;
+}
+
+.box
+{
+  position: relative;
+  z-index: 1000;
+  cursor:auto;
+}
+.calendercontainer
+{
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  background: rgba(255,255,255,0.1);
+  box-shadow:0 25px 45px rgba(0, 0, 0, 0.19);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-right: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(100px);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor:auto;
+}
+#calendar
+{
+  font-weight: bold;
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+}
+#calendar table
+{
+  width: 100%;
+  margin-top: 40px;
+  border-spacing: 5px;
+  font-weight: bold;
+}
+#calendar table td
+{
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#calendar table td:hover
+{
+color: red;  
+}
+#calendar table tr:nth-child(1) td
+{
+  border-radius: 5px;
+  font-weight: 600;   
+}
+
+.dycalendar-prev-next-btn.prev-btn 
+{
+  width: 44px;
+  height: 25px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.dycalendar-prev-next-btn.prev-btn:hover,
+.dycalendar-prev-next-btn.next-btn:hover,.dycalendar-prev-next-btn.prev-btn:active,
+.dycalendar-prev-next-btn.next-btn:active
+{   
+  color:red;
+  cursor: pointer;
+}
+
+.dycalendar-prev-next-btn.prev-btn,
+.dycalendar-prev-next-btn.next-btn
+{
+  width: 44px;
+  height: 25px;
+  border-radius: 4px;
+  display:inline-block;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.dycalendar-span-month-year
+{
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+ /* day calendar style
+*-------------------------------------------------*/
+.dycalendar-day-container {
+  padding : 10px;
+  text-align : center;
+  font-family : Arial;
+  font-weight: bold;
+}
+
+.dycalendar-day-container div{
+  padding : 0;
+  margin-bottom : 10px;
+}
+
+.dycalendar-day-container .dycalendar-span-day {
+  font-size : 110%;
+}
+
+.dycalendar-day-container .dycalendar-span-date {
+  font-size : 250%;
+}
+
+.dycalendar-day-container .dycalendar-span-month-year {
+  font-size : 90%
+}
+
+/* month calendar style
+*-------------------------------------------------*/
+.dycalendar-month-container {
+  padding : 10px;
+  text-align : center;
+  font-family : Arial;
+  font-weight: bold;
+}
+
+.dycalendar-month-container:active {
+cursor: pointer;
+}
+.dycalendar-month-container div{
+  padding : 0;
+  margin-bottom : 10px;
+}
+
+.dycalendar-month-container .dycalendar-header {
+  position : relative;
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn {
+  position : absolute;
+  top : 0;
+  cursor : pointer;
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn {
+  left : 0;
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn {
+  right : 0;
+}
+
+.dycalendar-month-container .dycalendar-span-month-year {
+  margin : 5px;
+  cursor : pointer;
+}
+  
+.dycalendar-month-container:hover .dycalendar-span-month-year:hover,.dycalendar-month-container:active .dycalendar-span-month-year:active {
+  color:red;
+  cursor: pointer;
+}
+
+.dycalendar-month-container .dycalendar-body table tr td {
+  padding : 5px;
+}
+
+.dycalendar-month-container .dycalendar-today-date,
+.dycalendar-month-container .dycalendar-target-date {
+  background-color: red !important;
+  color : #fff !important;
+  border-radius: 2px;
+}
+
+/*Top button*/
+#topBtn {
+  position: fixed;
+  height: 20px;
+  width: 20px;
+  bottom: 20px;
+  right: -60px;
+  z-index: 10;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 100% !important;
+  box-shadow: 0 0 10px  rgba(0, 0, 0, 19);
+  border: 0px;
+  transition: 0.2s;
+}
