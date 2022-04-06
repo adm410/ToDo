@@ -15,7 +15,7 @@ ToDo can be accessed using this [link](https://adm410.github.io/ToDo/).
 
 - Minor bug fixes.
 
-- Calender can no be opened by clicking on date or time.
+- Calender can now be opened by clicking on date or time.
 
     `→` to open calender.
 
