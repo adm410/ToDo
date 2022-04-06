@@ -4,7 +4,7 @@
 ![Website](https://img.shields.io/website?url=https://adm410.github.io/ToDo/)
 
 # ToDo
-
+ 
 A simple checklist made using HTML, Javascript and CSS.
 
 ToDo can be accessed using this [link](https://adm410.github.io/ToDo/).
