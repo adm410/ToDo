@@ -99,13 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
   window.onscroll = function() {scrollFunction()};
   
   function scrollFunction() {
-    if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
+    if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
       document.getElementById("headereffect").style.fontSize = "55px";
       document.getElementById("headereffect").style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
       document.getElementById("input").style.width = "70%";
       document.getElementById("input").style.height = "20px";
       document.getElementById("input").style.fontSize = "18px";
-      document.getElementById("headereffect").style.height = "170px";
+      document.getElementById("headereffect").style.height = "165px";
       document.getElementById("clock").style.fontSize = "15px";
       document.getElementById("clock").style.letterSpacing = "0px";
       document.getElementById("date").style.fontSize = "15px";
