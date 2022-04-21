@@ -1,4 +1,4 @@
-[![Build Complete](https://img.shields.io/badge/build-passing-brightgreen)](https://todo.admbot.repl.co/)
+[![Build Complete](https://img.shields.io/badge/build-passing-brightgreen)](https://adm410.github.io/ToDo/)
 ![GitHub Release Date](https://img.shields.io/github/release-date/adm410/ToDo)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/adm410/ToDo)
 ![Website](https://img.shields.io/website?url=https://adm410.github.io/ToDo/)
