@@ -211,13 +211,22 @@ input[type="text"] {
   transition: 0.3s;
   cursor: pointer;
 }
+
 .sidebar {
--webkit-backdrop-filter: blur(100px);
-backdrop-filter: blur(100px); 
-cursor:auto;
+  background-color: transparent;
+  backdrop-filter: blur(100px)  !important;
+  -webkit-backdrop-filter: blur(100px) !important;
+  -moz-backdrop-filter: blur(100px) !important;
+  box-shadow: 0 8px 32px 0 rgba(36, 36, 36, 0.37) !important;
+}
+/*.sidebar {
+  z-index: 10;
+  -webkit-backdrop-filter: blur(99px) !important;
+  backdrop-filter: blur(99px) !important;
+  cursor:auto;
 }
 
-/*.openbtn {
+.openbtn {
   background-color: transparent;
   border-color: transparent;
   z-index: 11;
@@ -260,6 +269,7 @@ section
 }
 .calendercontainer
 {
+  z-index: 20;
   position: relative;
   width: 400px;
   min-height: 400px;
@@ -408,7 +418,8 @@ cursor: pointer;
   cursor : pointer;
 }
   
-.dycalendar-month-container:hover .dycalendar-span-month-year:hover,.dycalendar-month-container:active .dycalendar-span-month-year:active {
+:is(dycalendar-month-container,dycalendar-span-month-year)p:hover
+:is(dycalendar-month-container,dycalendar-span-month-year)p:active  {
   color:red;
   cursor: pointer;
 }
@@ -435,17 +446,25 @@ a {
   width: 20px !important;
   bottom: 20px;
   right: -60px;
-  z-index: 10;
+  z-index: 10px;
   font-size: 30px;
   cursor: pointer;
   padding: 15px;
   border-radius: 100% !important;
-  box-shadow: 0 0 8px  rgba(0, 0, 0, 19) !important;
+  background-color: transparent;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 19)!important;
   border: 0px !important;
   transition: 0.2s !important;
 }
 
 .version {
-  padding-top: 90px;
+  margin: auto;
+  position: relative;
+  padding: 10px;
+  bottom: 0;
   font-size: 15px;
+}
+
+a{
+  font-weight: 600;
 }

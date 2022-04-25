@@ -126,6 +126,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 }
 
+//Reload CSS for buggy calender background
+function reloadStylesheets() {
+    var queryString = '?reload=' + new Date().getTime();
+    $('link[rel="stylesheet"]').each(function () {
+        this.href = this.href.replace(/\?.*|$/, queryString);
+    });
+}
+
 //Clock
 var clock = (function(){
   'use-strict';

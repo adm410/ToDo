@@ -9,15 +9,11 @@ A simple checklist made using HTML, Javascript and CSS.
 
 ToDo can be accessed using this [link](https://adm410.github.io/ToDo/).
 
-## Updates in V2.2.1
+## Updates in V3
 
-- Added [link](https://adm410.github.io/ToDo/) to Github page.
+- Fixed Sidebar Background
 
 - Updated Visuals.
-
-- Tweaked animations.
-
-- Tweaked Favicons.
 
 ## Screenshots
 
