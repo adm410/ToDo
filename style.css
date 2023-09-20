@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --blue: #3C87FF;
+  --green: #62BB47;
+  --darkgreen: #3CBA54;
+  --gray: #AAA;
+  --bordergray: #DFE2E699 !important;
+  --red: #E03A3C;
+
+  --white: rgb(250, 250, 250) !important;
+  --textwhite: white !important;
+  --lightwhite: white !important;
+
+  --black: #0E1620 !important;
+  --textblack: black !important;
+  --lightblack: #17202A !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif !important;
+  scroll-behavior: smooth;
+  background-color: var(--white) !important;
+  color: var(--black) !important;
+}
+
+body.dark-mode {
+  background-color: var(--black) !important;
+  color: var(--white) !important;
+}
+
+::selection {
+  color: var(--white);
+  background: var(--blue);
+}
+
+#input {
+  transition: 0.2s;
+  height: 50px;
+  border: solid var(--bordergray) 2px !important;
+  border-radius: 15px !important;
+  background-color: var(--lightwhite);
+}
+
+#input.dark-mode {
+  color: var(--textwhite);
+  background-color: var(--lightblack);
+}
+
+::placeholder {
+  color: var(--gray) !important;
+}
+
+header {
+  height: 240px;
+  transition: 0.2s !important;
+  border-bottom: solid var(--bordergray) 2px !important;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+}
+
+
+#headertxt {
+  transition: 0.2s;
+  font-size: 50px;
+  font-weight: 700 !important;
+  font-family: Arial !important;
+}
+
+.controls,
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  transition: 0.2s !important;
+  padding: 18px 25px;
+  font-weight: 600 !important;
+}
+
+.filters {
+  transition: 0.2 !important;
+  background-color: transparent !important;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  border-radius: 6px !important;
+  color: var(--black);
+  width: fit-content;
+  padding-left: 16px !important;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.filters span {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.filters span.active {
+  color: var(--blue);
+}
+
+.filters.dark-mode {
+  color: var(--white);
+}
+
+.controls .btn {
+  transition: 0.2s;
+  cursor: pointer;
+  padding: 7px 13px;
+  letter-spacing: 0.3px;
+  font-size: 13px;
+  transition: 0.2s;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+}
+
+.btn:active,
+.dycalendar-prev-next-btn.prev-btn:active,
+.dycalendar-prev-next-btn.next-btn:active,
+#date:active {
+  transform: scale(0.95) !important;
+}
+
+.task-box {
+  margin-top: 20px;
+  margin-right: 5px;
+  padding: 0 20px 10px 25px;
+}
+
+.task-box .task {
+  transition: 0.2s;
+  list-style: none;
+  font-size: 20px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  align-items: flex-start;
+}
+
+.task-box .task:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.task-box .task label {
+  display: flex;
+  align-items: flex-start;
+}
+
+.task label input {
+  margin-top: 7px;
+}
+
+.task label p {
+  transition: 0.2s !important;
+  font-weight: 500;
+  user-select: none;
+  margin-left: 12px;
+  word-wrap: break-word;
+}
+
+.task label p.checked {
+  color: var(--gray) !important;
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+.form-check-input {
+  transition: 0.2s;
+  scale: 130% !important;
+  border: 1.5px solid var(--bordergray) !important;
+  border-radius: 6px !important;
+  background-color: transparent !important;
+}
+
+.form-check-input.dark-mode {
+  background-color: var(--lightblack) !important;
+}
+
+.form-check-input:checked {
+  background-color: var(--green) !important;
+  border: 2px solid var(--darkgreen) !important;
+}
+
+.task-box .settings {
+  position: relative;
+}
+
+.settings :where(i, li) {
+  cursor: pointer;
+}
+
+.task-menu {
+  z-index: 10;
+  transition: 0.2s;
+  position: absolute;
+  transform: scale(0);
+  transform-origin: top right;
+  background-color: transparent !important;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  border: solid var(--bordergray) 1px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.task-box .task:last-child {
+  transform-origin: bottom right;
+}
+
+.task-box .task:first-child {
+  transform-origin: top right;
+}
+
+.task-menu.show {
+  transform: scale(1);
+}
+
+.task-menu li {
+  font-size: 16px;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+
+.task-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.settings li i {
+  padding-right: 8px;
+}
+
+.form-check-input {
+  cursor: pointer;
+}
+
+.dropdown-toggle {
+  color: var(--gray) !important;
+}
+
+#dropdowntxt {
+  color: var(--black);
+}
+
+#dropdowntxt.dark-mode {
+  color: var(--white);
+}
+
+.Edit,
+.Delete {
+  transition: 0.1s;
+  font-weight: 550 !important;
+  border-radius: 6px !important;
+}
+
+.Edit:hover {
+  color: var(--white) !important;
+  background-color: var(--blue) !important;
+}
+
+.Edit {
+  color: var(--blue) !important;
+}
+
+.Delete {
+  color: var(--red) !important;
+}
+
+.Delete:hover {
+  color: var(--white) !important;
+  background-color: var(--red) !important;
+}
+
+.versiontext {
+  font-size: small;
+  font-weight: bold;
+  opacity: 0.4
+}
+
+#date {
+  opacity: 0.8;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s !important;
+  cursor: pointer;
+}
+
+.calencontainer {
+  position: relative;
+  width: 410px;
+  min-height: 400px;
+  border: 2px solid var(--bordergray);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightwhite);
+  color: var(--black);
+}
+
+.calencontainer.dark-mode {
+  background-color: var(--lightblack);
+  color: var(--white);
+}
+
+#calendar {
+  width: 100%;
+  padding: 0 20px 0 20px;
+}
+
+#calendar table {
+  transition: 0.2s !important;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#calendar table td {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#calendar table td:hover {
+  color: var(--red);
+}
+
+#calendar table tr:nth-child(1) td {
+  font-weight: 650;
+  user-select: none;
+  pointer-events: none;
+}
+
+.dycalendar-prev-next-btn.prev-btn,
+.dycalendar-prev-next-btn.next-btn {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  width: 44px;
+  height: 25px;
+  padding-top: 17px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.2s !important;
+}
+
+.dycalendar-prev-next-btn.prev-btn:hover,
+.dycalendar-prev-next-btn.next-btn:hover {
+  color: var(--red);
+}
+
+.dycalendar-prev-next-btn.prev-btn:active,
+.dycalendar-prev-next-btn.next-btn:active {
+  color: var(--red);
+}
+
+.dycalendar-span-month-year {
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.dycalendar-span-month-year.dark-mode {
+  color: var(--white) !important;
+}
+
+.dycalendar-span-month-year:hover {
+  color: var(--red);
+}
+
+.dycalendar-day-container,
+.dycalendar-month-container {
+  font-weight: 550 !important;
+  text-align: center;
+  position: relative;
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn {
+  left: 0;
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn {
+  right: 0;
+}
+
+.dycalendar-month-container .dycalendar-today-date,
+.dycalendar-target-date {
+  background-color: var(--red);
+  color: var(--white) !important;
+  border-radius: 20px !important;
+}
+
+.offcanvas {
+  width: fit-content !important;
+  border-radius: 0px 15px 15px 0px !important;
+  border-top: solid var(--bordergray) 2px !important;
+  border-right: solid var(--bordergray) 2px !important;
+  border-bottom: solid var(--bordergray) 2px !important;
+  background-color: var(--white) !important;
+}
+
+.offcanvas.dark-mode {
+  background-color: var(--black) !important;
+}
+
+#linkOut {
+  transition: 0.2s;
+  font-size: 30px !important;
+  font-weight: 600 !important;
+  color: var(--black);
+}
+
+#linkOut.dark-mode {
+  color: var(--white);
+}
+
+#linkOut:hover {
+  color: var(--blue) !important;
+}
+
+
+.sort {
+  color: var(--blue) !important;
+  border: solid var(--blue) 2px !important;
+  border-radius: 10px !important;
+  background-color: transparent;
+}
+
+.sort:hover {
+  background-color: var(--blue) !important;
+  color: var(--white) !important;
+}
+
+.sort:active {
+  background-color: var(--blue) !important;
+  color: var(--white) !important;
+}
+
+.clear-btn {
+  color: var(--red) !important;
+  border: solid var(--red) 2px !important;
+  border-radius: 10px !important;
+  background-color: transparent;
+}
+
+.clear-btn:hover {
+  background-color: var(--red) !important;
+  color: var(--white) !important;
+}
+
+.clear-btn:active {
+  background-color: var(--red) !important;
+  color: var(--white) !important;
+}
