@@ -12,7 +12,7 @@ ToDo can be accessed using this [link](https://adm410.github.io/ToDo/).
 
 - Fully Redesigned UI.
 
-- Updated Fav\icons.
+- Updated Favicons.
 
 - Tweaked Animations.
 
